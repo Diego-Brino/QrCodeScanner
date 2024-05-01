@@ -1,0 +1,25 @@
+#scan-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#scan-button:hover {
+    background-color: #45a049;
+}
+
+@media screen and (max-width: 600px) {
+  #scan-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
