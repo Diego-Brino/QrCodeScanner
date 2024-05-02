@@ -1,12 +1,13 @@
 let scanner = new window.Instascan.Scanner({ video: document.getElementById('qr-code-scan') }); 
 
-const startScan = () => {
-    scanner.addListener('scan', (content) => {
-        document.querySelector('.qr-code').style.display = 'none'
-        scanner.stop(); 
-        alert('Conteúdo: ' + content);
-    });
+scanner.addListener('scan', (content) => {
+    scanner.stop(); 
+    document.querySelector('.qr-code').style.display = 'none'
+    alert('Conteúdo: ' + content);
+    console.log(content);
+});
 
+const startScan = () => {
     window.Instascan.Camera.getCameras()
         .then(cameras => {
             scanner.start(cameras[0]);
